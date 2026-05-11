@@ -5,21 +5,21 @@
 class Mira < Formula
   desc "A pretty, interactive folder visualizer for the terminal."
   homepage "https://github.com/mondial7/mira"
-  version "1.0.0"
+  version "1.1.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/mondial7/mira/releases/download/v1.0.0/mira_1.0.0_darwin_x86_64.tar.gz"
-      sha256 "6624627978e04861666b42c5d949e6fb0fafb08a74e6e3e90616d7ccb3b44d13"
+      url "https://github.com/mondial7/mira/releases/download/v1.1.0/mira_1.1.0_darwin_x86_64.tar.gz"
+      sha256 "9b941558d29270da27f4b9e9d6a85a1df430e876c15b5c087d9c4d6f996b2c52"
 
       define_method(:install) do
         bin.install "mira"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/mondial7/mira/releases/download/v1.0.0/mira_1.0.0_darwin_arm64.tar.gz"
-      sha256 "1c909c104079817dc91b4230321adc7c9e9a8e0f86c66d3c457f1b1b76619b2a"
+      url "https://github.com/mondial7/mira/releases/download/v1.1.0/mira_1.1.0_darwin_arm64.tar.gz"
+      sha256 "c0f932052f8ac8a3ee661b180ca3c1fb7bcc65bb09461cfb880efc7070d9f83d"
 
       define_method(:install) do
         bin.install "mira"
@@ -29,15 +29,15 @@ class Mira < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/mondial7/mira/releases/download/v1.0.0/mira_1.0.0_linux_x86_64.tar.gz"
-      sha256 "57ba07ccac04ca32354da316f4d90d48ce851b1b427d577be5cfeb3cc1ed1cbd"
+      url "https://github.com/mondial7/mira/releases/download/v1.1.0/mira_1.1.0_linux_x86_64.tar.gz"
+      sha256 "964e3991754748ee4897e521bc49144346aefe4a9bd518432a0ea5dbf029d72a"
       define_method(:install) do
         bin.install "mira"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/mondial7/mira/releases/download/v1.0.0/mira_1.0.0_linux_arm64.tar.gz"
-      sha256 "a6e45aaa6ee11d1b540128b49fbd0152a91717ab4d8cc0ed8cd8f6842ffeaec5"
+      url "https://github.com/mondial7/mira/releases/download/v1.1.0/mira_1.1.0_linux_arm64.tar.gz"
+      sha256 "1513200e2765fd8f740be621f4a9a327a21490499509bcfc0acd77a10d6badb3"
       define_method(:install) do
         bin.install "mira"
       end
