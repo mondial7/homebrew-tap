@@ -16,7 +16,7 @@ cask "local-servers" do
 
   app "Local Servers.app"
 
-  postflight do
+  postflight_steps do
     # Gatekeeper blocks an unsigned app that arrived with a quarantine
     # attribute, which is every cask download: macOS reports "Apple could
     # not verify … is free of malware" and offers only Move to Bin.
@@ -24,11 +24,11 @@ cask "local-servers" do
     # Removing the attribute is the standard remedy for an unsigned
     # open-source app, and it is a real trade-off: it skips the
     # notarisation check for this bundle. The honest fix is a Developer ID
-    # signature and notarisation, which needs an Apple developer account.
-    if system_command("/usr/bin/xattr", args: ["-h"]).exit_status == 0
-      system_command "/usr/bin/xattr",
-                     args: ["-dr", "com.apple.quarantine", "#{staged_path}/Local Servers.app"]
-    end
+    # signature and notarisation, which needs an Apple developer account —
+    # tracked in mondial7/local-servers#1.
+    run "/usr/bin/xattr",
+        args:         ["-dr", "com.apple.quarantine", "{{appdir}}/Local Servers.app"],
+        must_succeed: false
   end
 
   uninstall quit: "com.marcomondini.localservers"
