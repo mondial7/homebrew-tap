@@ -1,6 +1,6 @@
 cask "local-servers" do
-  version "1.0.0"
-  sha256 "ae87985cffde5869d6b2e8faf21d0483b1c1b939923c5f81c8356ceb7cf80b55"
+  version "1.0.1"
+  sha256 "1f1a0b92a31eadea9d1fe659daa49888fdeb388538ea1809cc11d8b59dd4064d"
 
   url "https://github.com/mondial7/local-servers/releases/download/v#{version}/LocalServers_#{version}_universal.zip"
   name "Local Servers"
