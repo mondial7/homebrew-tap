@@ -12,7 +12,7 @@ cask "local-servers" do
     strategy :github_latest
   end
 
-  depends_on macos: ">= :ventura"
+  depends_on macos: :ventura
 
   app "Local Servers.app"
 
