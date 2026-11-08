@@ -5,21 +5,21 @@
 class MondspaceLandscape < Formula
   desc "Turn any codebase into a zoomable, C4-style architecture map, analyzed locally"
   homepage "https://github.com/mondial7/mondspace-landscape"
-  version "0.1.0-alpha"
+  version "0.1.1-alpha"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/mondial7/mondspace-landscape/releases/download/v0.1.0-alpha/mondspace-landscape_0.1.0-alpha_darwin_x86_64.tar.gz"
-      sha256 "727b28714b74eba7f7017dd312258599cd76644894bfb7f1dbc4895f33d38650"
+      url "https://github.com/mondial7/mondspace-landscape/releases/download/v0.1.1-alpha/mondspace-landscape_0.1.1-alpha_darwin_x86_64.tar.gz"
+      sha256 "ce4381567fe6a0832f30a7fcf6ac7cabcc1920803925c4dfb50b72851c0769f6"
 
       define_method(:install) do
         bin.install "landscape"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/mondial7/mondspace-landscape/releases/download/v0.1.0-alpha/mondspace-landscape_0.1.0-alpha_darwin_arm64.tar.gz"
-      sha256 "deda6876e8023815647e2e37beb14a060fa5834b1fc09affd4a954c87374dec2"
+      url "https://github.com/mondial7/mondspace-landscape/releases/download/v0.1.1-alpha/mondspace-landscape_0.1.1-alpha_darwin_arm64.tar.gz"
+      sha256 "6be816018a3ba68efcf953ceade005854d2183af4ff28ce6e33727d0231827be"
 
       define_method(:install) do
         bin.install "landscape"
@@ -29,15 +29,15 @@ class MondspaceLandscape < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/mondial7/mondspace-landscape/releases/download/v0.1.0-alpha/mondspace-landscape_0.1.0-alpha_linux_x86_64.tar.gz"
-      sha256 "aad42f9b85828fce38d1aabf2522c19681a25216bcbc14d5b0d2bfe12336e256"
+      url "https://github.com/mondial7/mondspace-landscape/releases/download/v0.1.1-alpha/mondspace-landscape_0.1.1-alpha_linux_x86_64.tar.gz"
+      sha256 "24ce9e160b1e4b57de2214a8e4778fe6dd95535c4d519167f7099b48d1c995cb"
       define_method(:install) do
         bin.install "landscape"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/mondial7/mondspace-landscape/releases/download/v0.1.0-alpha/mondspace-landscape_0.1.0-alpha_linux_arm64.tar.gz"
-      sha256 "e2326d47ca261fd3e076c96bdff80c6de2441d1b616ba988f647382f223b66ec"
+      url "https://github.com/mondial7/mondspace-landscape/releases/download/v0.1.1-alpha/mondspace-landscape_0.1.1-alpha_linux_arm64.tar.gz"
+      sha256 "a60e39a6a9990973e4c48ca347f850bb6c22a1f77e76a2ce0c6115b80c79423f"
       define_method(:install) do
         bin.install "landscape"
       end
